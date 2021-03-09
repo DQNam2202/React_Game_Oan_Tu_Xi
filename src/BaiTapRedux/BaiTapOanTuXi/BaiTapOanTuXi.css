@@ -1,0 +1,56 @@
+.bg-game {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/bgGame.png');
+    /* Nếu độ lớn của hình ảnh vượt quá độ lớn màn hình thì sử dụng bg-size để Scale lại phù hợp với màn hình */
+    background-size: 100%;
+    /* Gọi fonts cần sử dụng */
+    font-family: 'fontGame';
+}
+
+/* Tạo font cho game*/
+@font-face {
+    font-family: 'fontGame';
+    src: url('../Fonts/Pony.ttf');
+}
+
+
+.playerGame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.think {
+    border: 2px solid #45D994;
+    height: 120px;
+    width: 150px;
+    background: #fff;
+    border-radius: 10px;
+}
+.btnItem{
+    width: 40px;
+    height: 40px;
+}
+.speech-bubble {
+    position: relative;
+    background: #45D994;
+    border-radius: .4em;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-top-color: #45D994;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -6.5px;
+    margin-bottom: -24px;
+}

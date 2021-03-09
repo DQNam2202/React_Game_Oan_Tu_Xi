@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Cài đặt redux
+import { Provider } from "react-redux";
+import { store } from "./redux/configStore";
+
+
 ReactDOM.render(
-  <React.StrictMode>
+  // Cung cấp store cho toàn bộ component
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
